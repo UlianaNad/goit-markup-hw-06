@@ -282,10 +282,11 @@ img {
 }
 /* HERO section */
 .hero {
-  max-width: 1440px;
+  max-width: 428px;
+  height: 432px;
   margin: 0 auto;
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding-top: 112px;
+  padding-bottom: 112px;
   text-align: center;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
@@ -296,7 +297,18 @@ img {
   background-size: cover;
   background-position: center;
 }
-
+@media only screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .hero {
+    max-width: 1140px;
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
+}
 .hero-button {
   display: block;
   color: var(--white);
@@ -314,6 +326,22 @@ img {
   border: 1px solid transparent;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.section-title-block {
+  max-width: 496px;
+  color: var(--white);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.07;
+  text-align: center;
+  margin-bottom: 48px;
+  font-size: 36px;
+}
+@media only screen and (min-width: 768px) {
+  .section-title-block {
+    font-size: 56px;
+  }
 }
 
 /* SECTION-STRATEGY */
@@ -610,17 +638,6 @@ img {
   border: 1px solid transparent;
   box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12),
     0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
-}
-
-.section-title-block {
-  max-width: 496px;
-  color: var(--white);
-  font-size: 56px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  line-height: 1.07;
-  text-align: center;
-  margin-bottom: 48px;
 }
 
 .portfolio-flex {
