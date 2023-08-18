@@ -78,14 +78,13 @@ img {
 }
 
 .container {
-  min-width: 320px;
   max-width: 428px;
   margin: 0 auto;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
 
-  outline: 1px solid red;
-  outline-offset: -1px;
+  /* outline: 1px solid red;
+  outline-offset: -1px; */
 }
 @media only screen and (min-width: 768px) {
   .container {
@@ -304,7 +303,8 @@ img {
 }
 @media only screen and (min-width: 1158px) {
   .hero {
-    max-width: 1140px;
+    max-width: 1158px;
+    height: 600px;
     padding-top: 188px;
     padding-bottom: 188px;
   }
@@ -329,26 +329,37 @@ img {
 }
 
 .section-title-block {
-  max-width: 496px;
+  max-width: 320px;
   color: var(--white);
   font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 1.07;
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
   font-size: 36px;
 }
 @media only screen and (min-width: 768px) {
   .section-title-block {
     font-size: 56px;
+    margin-bottom: 36px;
+    max-width: 496px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .section-title-block {
+    margin-bottom: 48px;
   }
 }
 
 /* SECTION-STRATEGY */
 .section-strategy {
-  padding: 120px 0;
+  padding: 96px 0;
 }
-
+@media only screen and (min-width: 1158px) {
+  .section-strategy {
+    padding: 120px 0;
+  }
+}
 .strategy-block {
   display: flex;
   flex-wrap: wrap;
@@ -401,10 +412,22 @@ img {
 .strategy-block .title {
   text-align: center;
   margin-bottom: 8px;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 36px;
+  font-weight: 700;
+
   line-height: 1.2;
   letter-spacing: 0.02em;
+}
+@media only screen and (min-width: 768px) {
+  .strategy-block .title {
+    text-align: start;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .strategy-block .title {
+    font-size: 20px;
+    font-weight: 500;
+  }
 }
 .strategy-block .description {
   color: var(--slate);
@@ -545,13 +568,19 @@ img {
 .customers-section {
   padding-top: 96px;
   padding-bottom: 96px;
-  /* padding-top: 120px;
-  padding-bottom: 120px; */
+}
+@media only screen and (min-width: 768px) {
+  .customers-section {
+    padding-right: 96px;
+    padding-left: 96px;
+  }
 }
 @media only screen and (min-width: 1158px) {
   .customers-section {
     padding-top: 120px;
     padding-bottom: 120px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 .customers-section .section-title {
@@ -560,11 +589,13 @@ img {
 .customers {
   display: flex;
   flex-wrap: wrap;
-  gap: 16px;
+  row-gap: 72px;
+  column-gap: 16px;
 }
 @media only screen and (min-width: 768px) {
   .customers {
-    gap: 24px;
+    row-gap: 72px;
+    column-gap: 24px;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -610,18 +641,51 @@ img {
 }
 
 /* ----------------------PORTFOLIO styles ---------------------------*/
+.list.main {
+  padding-top: 48px;
+}
+@media only screen and (min-width: 768px) {
+  .list.main {
+    padding-top: 64px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .list.main {
+    padding-top: 100px;
+  }
+}
 .button-section {
   display: flex;
-  margin-bottom: 72px;
-  justify-content: center;
-  /* gap: 24px; */
-  row-gap: 48px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+  row-gap: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .button-section {
+    justify-content: center;
+    margin-bottom: 64px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .button-section {
+    justify-content: center;
+    margin-bottom: 72px;
+  }
 }
 .button-section .button {
-  color: #ffffff;
-  background-color: var(--iris);
-  padding: 16px 32px;
-  border: 1px solid transparent;
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 4px;
+  text-align: center;
+  color: var(--iris);
+  background-color: var(--cloud);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  border: 1px solid var(--cornflower);
 }
 
 .button-section li {
@@ -649,10 +713,19 @@ img {
 
 .portfolio-block {
   display: block;
-  width: calc((100% - 48px) / 3);
+  width: calc(100% / 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+@media only screen and (min-width: 768px) {
+  .portfolio-block {
+    width: calc((100% - 24px) / 2);
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .portfolio-block {
+    width: calc((100% - 48px) / 3);
+  }
+}
 .portfolio-block .link-hover {
   display: block;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -701,11 +774,6 @@ img {
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.list.main {
-  padding-top: 96px;
-  padding-bottom: 120px;
-}
-
 .overlay {
   position: relative;
   overflow: hidden;
@@ -739,13 +807,36 @@ img {
 /* ------------------------footer ------------------------*/
 .footer {
   background-color: var(--navy-blue);
-  padding: 100px 0;
+  padding: 96px 0;
+}
+@media only screen and (min-width: 1158px) {
+  .footer {
+    background-color: var(--navy-blue);
+    padding: 100px 0;
+  }
+}
+.footer-container {
+  padding: 0 76px;
+  display: flex;
+  flex-direction: column;
 }
 
-.footer-container {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
+@media only screen and (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .footer-container {
+    padding: 0;
+    gap: 120px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .wrapper-container-footer {
+    display: flex;
+  }
 }
 .logo-footer {
   margin-bottom: 18px;
@@ -769,7 +860,15 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   margin-bottom: 16px;
+  text-align: center;
 }
+@media only screen and (min-width: 768px) {
+  .wrapper-footer .title,
+  .form-container .title {
+    text-align: start;
+  }
+}
+
 .wrapper-footer .social-icons-block {
   display: flex;
   gap: 16px;
@@ -782,8 +881,19 @@ img {
   display: inline-block;
 }
 
-.footer .info-block {
-  margin-right: 120px;
+.footer .info-block,
+.wrapper-footer {
+  /* margin-right: 120px; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 72px;
+}
+@media only screen and (min-width: 768px) {
+  .footer .info-block,
+  .wrapper-footer {
+    align-items: start;
+  }
 }
 
 .flex-social-icon .item {
@@ -815,13 +925,39 @@ img {
 }
 
 /* subscribe form */
-.subscribe-form {
+
+.form-container {
+  padding: 0 76px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .form-container {
+    align-items: start;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .form-container {
+    padding: 0;
+    padding-left: 80px;
+  }
+}
+.subscribe-form {
+  /* display: flex;
+  align-items: center;
+  gap: 24px; */
+}
+@media only screen and (min-width: 768px) {
+  .subscribe-form {
+    display: flex;
+    gap: 24px;
+  }
 }
 .subscribe-form-input {
-  width: 264px;
+  margin-bottom: 16px;
+  width: 398px;
+
   height: 40px;
   border-radius: 4px;
   border: 1px solid var(--white, #fff);
@@ -836,7 +972,16 @@ img {
   letter-spacing: 0.04em;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
-
+@media only screen and (max-width: 427.98px) {
+  .subscribe-form-input {
+    width: 264px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .subscribe-form-input {
+    width: 264px;
+  }
+}
 .subscribe-form-input:focus {
   border: 1px solid var(--iris);
 }
@@ -865,6 +1010,8 @@ img {
   line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
+
+  margin: 0 auto;
 
   display: flex;
   align-items: center;
@@ -901,18 +1048,27 @@ img {
 
 .modal {
   padding: 72px 24px 24px 24px;
-
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
-  width: 408px;
+  min-width: 392px;
   min-height: 584px;
   border-radius: 4px;
   background: var(--dairy, #fcfcfc);
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media only screen and (min-width: 319.98px) and (max-width: 427.98px) {
+  .modal {
+    min-width: 300px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .modal {
+    min-width: 408px;
+  }
 }
 
 .modal-btn {
