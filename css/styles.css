@@ -1044,7 +1044,8 @@ input[type="checkbox"]:checked + .modal-agreement-description .custom-checkbox {
   text-decoration: underline;
 }
 
-.menu-toggle {
+.menu-toggle:hover .menu-toggle-icon {
+  fill: var(--white);
 }
 
 @media (min-width: 768px) {
