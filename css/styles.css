@@ -95,6 +95,8 @@ img {
 @media only screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -321,7 +323,6 @@ img {
 
 .strategy-block {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   gap: 72px;
 }
@@ -341,9 +342,9 @@ img {
   .strategy-block .item:nth-child(2n + 1) {
     margin-right: 24px;
   }
-  /* .strategy-block .item:nth-child(-2n + 2) {
+  .strategy-block .item:nth-last-child(-n + 2) {
     margin-bottom: 0;
-  } */
+  }
 }
 @media only screen and (min-width: 1158px) {
   .strategy-block .item {
@@ -395,7 +396,13 @@ img {
 
 /* ACTIONS section */
 .section.actions {
+  display: none;
   padding-top: 0;
+}
+@media only screen and (min-width: 1158px) {
+  .section.actions {
+    display: block;
+  }
 }
 .actions-list {
   display: flex;
@@ -419,18 +426,38 @@ img {
 
 .crew {
   display: flex;
-  gap: 24px;
-  align-items: center;
-}
+  justify-content: center;
+  flex-wrap: wrap;
 
+  row-gap: 72px;
+}
+.crew .person img {
+  margin: 0 auto;
+}
 .crew .person {
   border-radius: 0px 0px 4px 4px;
   background-color: var(--white);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: calc((100% - 3 * 24px) / 4);
+  width: 264px;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
     0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+@media only screen and (min-width: 768px) {
+  .crew {
+    column-gap: 24px;
+  }
+  .crew {
+    row-gap: 64px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .crew {
+    column-gap: 24px;
+  }
+  .crew {
+    row-gap: 0;
+  }
 }
 
 .person-wrapper {
