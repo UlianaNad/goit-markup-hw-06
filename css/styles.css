@@ -95,6 +95,8 @@ img {
 @media only screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -321,7 +323,6 @@ img {
 
 .strategy-block {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
   gap: 72px;
 }
@@ -341,9 +342,9 @@ img {
   .strategy-block .item:nth-child(2n + 1) {
     margin-right: 24px;
   }
-  /* .strategy-block .item:nth-child(-2n + 2) {
+  .strategy-block .item:nth-last-child(-n + 2) {
     margin-bottom: 0;
-  } */
+  }
 }
 @media only screen and (min-width: 1158px) {
   .strategy-block .item {
@@ -1044,7 +1045,8 @@ input[type="checkbox"]:checked + .modal-agreement-description .custom-checkbox {
   text-decoration: underline;
 }
 
-.menu-toggle {
+.menu-toggle:hover .menu-toggle-icon{
+  fill: var(--white);
 }
 
 @media (min-width: 768px) {
