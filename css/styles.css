@@ -53,8 +53,14 @@ img {
 }
 
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+@media only screen and (min-width: 1158px) {
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 
 .section-title {
@@ -83,12 +89,12 @@ img {
 }
 @media only screen and (min-width: 768px) {
   .container {
-    max-width: 737px;
+    max-width: 768px;
   }
 }
 @media only screen and (min-width: 1158px) {
   .container {
-    max-width: 1128px;
+    max-width: 1158px;
   }
 }
 
@@ -317,30 +323,54 @@ img {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  gap: 72px;
 }
-
+@media only screen and (min-width: 768px) {
+  .strategy-block {
+    gap: 0;
+  }
+}
 .strategy-block .item {
-  width: calc((100% - 3 * 24px) / 4);
-  margin-right: 24px;
+  width: calc(100% / 1);
 }
-
+@media only screen and (min-width: 767.98px) {
+  .strategy-block .item {
+    width: calc((100% - 24px) / 2);
+    margin-bottom: 72px;
+  }
+  .strategy-block .item:nth-child(2n + 1) {
+    margin-right: 24px;
+  }
+  /* .strategy-block .item:nth-child(-2n + 2) {
+    margin-bottom: 0;
+  } */
+}
+@media only screen and (min-width: 1158px) {
+  .strategy-block .item {
+    width: calc((100% - 3 * 24px) / 4);
+    margin-right: 24px;
+    margin-bottom: 0;
+  }
+}
 .strategy-block .icon-wrap {
   width: 264px;
   height: 112px;
   background-color: var(--cloud);
   border-radius: 4px;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 8px;
 }
-
-.strategy-block {
-  margin-bottom: 8px;
+@media only screen and (min-width: 1158px) {
+  .strategy-block .icon-wrap {
+    display: flex;
+  }
 }
 
 .strategy-block .title {
+  text-align: center;
   margin-bottom: 8px;
   font-size: 20px;
   font-weight: 500;
@@ -352,8 +382,13 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  font-weight: 500;
 }
-
+@media only screen and (min-width: 1158px) {
+  .strategy-block .description {
+    font-weight: 400;
+  }
+}
 .strategy-block .item:last-child {
   margin-right: 0;
 }
