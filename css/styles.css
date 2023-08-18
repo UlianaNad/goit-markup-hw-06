@@ -1066,6 +1066,7 @@ input[type="checkbox"]:checked + .modal-agreement-description .custom-checkbox {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  padding-top: 40px;
 }
 .site-nav-mobile-menu .link-decor {
   color: var(--navyblue);
@@ -1098,7 +1099,7 @@ input[type="checkbox"]:checked + .modal-agreement-description .custom-checkbox {
   font-style: normal;
   margin-bottom: 40px;
 }
-@media only screen and (max-width: 427.98px) {
+@media only screen and (max-width: 432.98px) {
   .address-mobile-menu .phone {
     font-size: 28px;
   }
