@@ -146,12 +146,7 @@ img {
   margin-right: 40px;
 }
 
-.site-nav .item:last-child,
-.address-nav .item:last-child {
-  margin-right: 0px;
-}
 .logo {
-  /* margin-right: 76px; */
   color: var(--iris);
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
@@ -161,6 +156,11 @@ img {
   letter-spacing: 0.02em;
 }
 @media only screen and (min-width: 768px) {
+  .logo {
+    margin-right: 120px;
+  }
+}
+@media only screen and (min-width: 1158px) {
   .logo {
     margin-right: 76px;
   }
@@ -231,28 +231,36 @@ img {
 }
 .address-nav {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1158px) {
+  .address-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
 }
 .address-nav a {
   color: var(--slate);
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.2;
   letter-spacing: 0.02em;
   transition-property: color;
   transition-duration: 1s;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--slate, #434455);
+}
+@media only screen and (min-width: 1158px) {
+  .address-nav a {
+    font-size: 16px;
+    line-height: 1.5;
+  }
 }
 .address-nav a:hover,
 .address-nav a:focus {
   color: var(--iris);
 }
 
-@media only screen and (min-width: 1128px) {
-  .address-nav .email-link {
-    margin-right: 40px;
-  }
-}
 .address {
   font-style: normal;
   margin-left: auto;
@@ -688,21 +696,25 @@ img {
 }
 
 /* ----------------------PORTFOLIO styles ---------------------------*/
-.list.main {
-  padding-top: 48px;
+.portfolio-container {
+  /* padding-top: 48px; */
+  padding-bottom: 48px;
 }
 @media only screen and (min-width: 768px) {
-  .list.main {
-    padding-top: 64px;
+  .portfolio-container {
+    /* padding-top: 64px; */
+    padding-bottom: 96px;
   }
 }
 @media only screen and (min-width: 1158px) {
-  .list.main {
-    padding-top: 100px;
+  .portfolio-container {
+    /* padding-top: 100px; */
+    padding-bottom: 120px;
   }
 }
 .button-section {
   display: flex;
+  margin-top: 48px;
   margin-bottom: 48px;
   flex-wrap: wrap;
   row-gap: 16px;
@@ -710,12 +722,14 @@ img {
 @media only screen and (min-width: 768px) {
   .button-section {
     justify-content: center;
+    margin-top: 64px;
     margin-bottom: 64px;
   }
 }
 @media only screen and (min-width: 1158px) {
   .button-section {
     justify-content: center;
+    margin-top: 100px;
     margin-bottom: 72px;
   }
 }
@@ -754,10 +768,20 @@ img {
 .portfolio-flex {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
   row-gap: 48px;
 }
 
+@media only screen and (min-width: 768px) {
+  .portfolio-flex {
+    gap: 24px;
+    row-gap: 72px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .portfolio-flex {
+    row-gap: 48px;
+  }
+}
 .portfolio-block {
   display: block;
   width: calc(100% / 1);
@@ -813,14 +837,34 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button.portfolio {
-  width: fit-content;
+.button-portfolio {
+  display: inline-block;
+  border-radius: 4px;
+  text-align: center;
+  color: var(--iris);
+  background-color: var(--cloud);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  border: 1px solid var(--cornflower);
+  padding: 8px 16px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.button-portfolio:hover {
+  color: var(--cornflower);
+  background: var(--ocean, #404bbf);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+}
+@media only screen and (min-width: 768px) {
+  .button-portfolio {
+    padding: 12px 24px;
+  }
+}
 .overlay {
   position: relative;
   overflow: hidden;
@@ -870,6 +914,7 @@ img {
 
 @media only screen and (min-width: 768px) {
   .footer-container {
+    padding: 0 92px;
     flex-direction: row;
     gap: 24px;
   }
@@ -981,6 +1026,7 @@ img {
 }
 @media only screen and (min-width: 768px) {
   .form-container {
+    padding: 0 92px;
     align-items: start;
   }
 }
@@ -990,11 +1036,7 @@ img {
     padding-left: 80px;
   }
 }
-.subscribe-form {
-  /* display: flex;
-  align-items: center;
-  gap: 24px; */
-}
+
 @media only screen and (min-width: 768px) {
   .subscribe-form {
     display: flex;
@@ -1253,8 +1295,7 @@ img {
   color: var(--iris, #4d5ae5);
   line-height: 1.3;
 }
-.checkbox {
-}
+
 .custom-checkbox {
   fill: transparent;
   display: inline-flex;
@@ -1273,8 +1314,6 @@ input[type="checkbox"]:checked + .modal-agreement-description .custom-checkbox {
   background-color: var(--ocean);
   fill: var(--cloud);
   border: none;
-}
-.custom-checkbox-icon {
 }
 .submit_button {
   min-width: 169px;
