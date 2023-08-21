@@ -696,25 +696,24 @@ img {
 }
 
 /* ----------------------PORTFOLIO styles ---------------------------*/
-.portfolio-container {
-  /* padding-top: 48px; */
+.list.main {
+  padding-top: 48px;
   padding-bottom: 48px;
 }
 @media only screen and (min-width: 768px) {
-  .portfolio-container {
-    /* padding-top: 64px; */
+  .list.main {
+    padding-top: 64px;
     padding-bottom: 96px;
   }
 }
 @media only screen and (min-width: 1158px) {
-  .portfolio-container {
-    /* padding-top: 100px; */
+  .list.main {
+    padding-top: 100px;
     padding-bottom: 120px;
   }
 }
 .button-section {
   display: flex;
-  margin-top: 48px;
   margin-bottom: 48px;
   flex-wrap: wrap;
   row-gap: 16px;
@@ -722,14 +721,12 @@ img {
 @media only screen and (min-width: 768px) {
   .button-section {
     justify-content: center;
-    margin-top: 64px;
     margin-bottom: 64px;
   }
 }
 @media only screen and (min-width: 1158px) {
   .button-section {
     justify-content: center;
-    margin-top: 100px;
     margin-bottom: 72px;
   }
 }
